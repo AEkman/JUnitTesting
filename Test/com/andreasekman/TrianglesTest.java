@@ -6,10 +6,11 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TrianglesTest {
+
     private Triangles triangle;
 
     @Before
-    public void Setup()
+    public void setup()
     {
         this.triangle = new Triangles();
     }
