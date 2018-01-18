@@ -46,4 +46,9 @@ public class LanguageTest {
         int result = Language.vowelCount(s);
         assertEquals(0, result);
     }
+
+    @Test
+    public void testClass() {
+        Language language = new Language();
+    }
 }

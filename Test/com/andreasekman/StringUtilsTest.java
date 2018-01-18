@@ -58,6 +58,12 @@ public class StringUtilsTest {
         assertEquals(result, "kO");
     }
 
+    @Test
+    public void testClass() {
+
+        StringUtils stringUtils = new StringUtils();
+    }
+
     @Test(expected = NullPointerException.class)
     public void testReverseThrowsExceptionsWhenAddingNull(){
         StringUtils.reverse(null);

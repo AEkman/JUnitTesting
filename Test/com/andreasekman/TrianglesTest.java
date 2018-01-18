@@ -3,6 +3,7 @@ package com.andreasekman;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TrianglesTest {
@@ -31,6 +32,20 @@ public class TrianglesTest {
 
 
         assertEquals(false, actual);
+    }
+
+    @Test
+    public void testWithZeroSides() throws Exception {
+        boolean actual = triangle.isIscoscelesTriangle(0,0,0);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    public void testAllSidesAreEqual() throws Exception {
+        boolean actual = triangle.isIscoscelesTriangle(10,10,10);
+
+        assertFalse(actual);
     }
 
 }
