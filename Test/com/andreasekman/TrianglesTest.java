@@ -3,8 +3,8 @@ package com.andreasekman;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TrianglesTest {
 
@@ -18,18 +18,14 @@ public class TrianglesTest {
 
     @Test
     public void testIsIscoscelesTriangle() throws Exception {
-
         boolean actual = triangle.isIscoscelesTriangle(10,10,12);
-
 
         assertEquals(true, actual);
     }
 
     @Test
     public void testIsNotIscoscelesTriangle() throws Exception {
-
         boolean actual = triangle.isIscoscelesTriangle(1,2,3);
-
 
         assertEquals(false, actual);
     }
@@ -44,6 +40,13 @@ public class TrianglesTest {
     @Test
     public void testAllSidesAreEqual() throws Exception {
         boolean actual = triangle.isIscoscelesTriangle(10,10,10);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    public void testBrokenTriangle() throws Exception {
+        boolean actual = triangle.isIscoscelesTriangle(100,101,102);
 
         assertFalse(actual);
     }
